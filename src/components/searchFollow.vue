@@ -1,12 +1,14 @@
 <template>
     <div class="border-l-2 py-5 w-1/4 overflow-y-auto">
-        <input type="text" placeholder="Search Twitter" class="block m-auto w-5/6 bg-gray-300 p-2 mb-3 rounded-full">
-        <div class="bg-gray-100 rounded-md p-3 w-11/12 m-auto">
+        <input type="text" placeholder="Search Twitter" class="block m-auto w-5/6 bg-gray-100 p-3 mb-3 rounded-full">
+
+        <!-- Trends -->
+        <div class="bg-gray-100 rounded-md w-11/12 m-auto">
             <div class="flex justify-between items-baseline border-b py-2">
-                <p class="font-bold text-lg">Trends for you</p>
-                <i class="text-blue-400 fas fa-cog"></i>
+                <p class="font-bold text-lg p-2">Trends for you</p>
+                <i class="text-blue-400 fas fa-cog p-2"></i>
             </div>
-            <div v-for="( el, i ) in trends" :key="i" class="hover:bg-gray-200 py-2 cursor-pointer border-b flex items-center">
+            <div v-for="( el, i ) in trends" :key="i" class="hover:bg-gray-200 p-2 cursor-pointer border-b flex items-center">
                 <div class="w-3/4">
                     <p class="text-xs text-gray-400">{{ el. category }}</p>
                     <p class="text-md text-black">{{ el.name }}</p>
@@ -14,14 +16,15 @@
                 </div>
                 <i class="w-1/4 text-right fas fa-angle-down"></i>
             </div>
-            <p class="text-blue-400 font-semibold text-lg pt-3">Show more</p>
+            <p class="text-blue-400 font-semibold text-lg p-3">Show more</p>
         </div>
 
-        <div class="bg-gray-100 rounded-md p-3 w-11/12 m-auto mt-5">
-            <div class="flex justify-between items-baseline border-b py-2">
-                <p class="font-bold text-lg">Who to follow</p>
+        <!-- Follow -->
+        <div class="bg-gray-100 rounded-md w-11/12 m-auto mt-5">
+            <div class="flex justify-between items-baseline border-b">
+                <p class="font-bold text-lg p-2">Who to follow</p>
             </div>
-            <div v-for="( el, i ) in follow" :key="i" class="hover:bg-gray-200 py-2 cursor-pointer border-b flex items-center">
+            <div v-for="( el, i ) in follow" :key="i" class="hover:bg-gray-200 p-2 cursor-pointer border-b flex items-center">
                 <div class="flex justify-between w-full items-center">
                     <div>
                         <p class="text-md font-semibold text-black">{{ el. name }}</p>
@@ -30,7 +33,7 @@
                     <p class="text-sm text-blue-400 text-right rounded-full bg-gray-100 border-2 border-blue-400 py-2 px-4">follow</p>
                 </div>
             </div>
-            <p class="text-blue-400 font-semibold text-lg pt-3 ">Show more</p>
+            <p class="text-blue-400 font-semibold text-lg p-2 ">Show more</p>
         </div>
 
 
